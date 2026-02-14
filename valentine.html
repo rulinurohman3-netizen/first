@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine buat Tasya 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.25);
+      padding: 30px 25px;
+      border-radius: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      max-width: 340px;
+    }
+
+    h1 { font-size: 26px; }
+    p { font-size: 18px; line-height: 1.6; }
+
+    .btn {
+      margin: 10px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      background: #ff4d6d;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .btn:hover { transform: scale(1.1); }
+
+    .no {
+      background: #aaa;
+      position: absolute;
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 20px;
+      animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh); opacity: 1; }
+      to { transform: translateY(-10vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Musik Valentine -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/10/09/audio_4c7b6b7e6c.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card" id="card">
+    <h1>💝 Hai Tasya Cantik 💝</h1>
+    <p id="msg">
+      Katanya Valentine cuma sehari…<br>
+      tapi mikirin kamu tuh bisa tiap hari 😆💗
+    </p>
+    <button class="btn" onclick="next()">Klik aku 😳</button>
+  </div>
+
+  <button class="btn no" id="noBtn">GAK MAU 🙈</button>
+
+  <script>
+    let step = 0;
+    const msg =
